@@ -9,11 +9,15 @@ If pve DNS is not resolving correctly, check `/etc/resolv.conf` and make sure th
 Setup `dnsmasq`:
 * configure `/etc/hosts` file appropriately
 * `# service dnsmasq restart`
-
-For Windows to use DNS:
-* `netsh`
-* `interface ip show config`
-* `interface ip set dns "[adapter name]" static [DNS IP address]`
+* 
+<span style="color:red"> For Windows to use DNS (NOT THE BEST WAY TO DO IT): </span>
+* Deprecated:
+  * `netsh`
+  * `interface ip show config`
+  * `interface ip set dns "[adapter name]" static [DNS IP address]`
+  * If you have issues with static DNS servers not being removed when you set the adapter back to using DHCP, check the registry under `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces` and clear the static DNS servers that have been setup for the appropriate adapter
+* Best:
+  * Make the router use the DNS server, with a different backup DNS server
 
 ## Internet:
 Changed router or different network?
