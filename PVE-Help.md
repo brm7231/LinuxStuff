@@ -9,8 +9,8 @@ If pve DNS is not resolving correctly, check `/etc/resolv.conf` and make sure th
 Setup `dnsmasq`:
 * configure `/etc/hosts` file appropriately
 * `# service dnsmasq restart`
-* 
-<span style="color:red"> For Windows to use DNS (NOT THE BEST WAY TO DO IT): </span>
+
+For Windows to use DNS
 * Deprecated:
   * `netsh`
   * `interface ip show config`
